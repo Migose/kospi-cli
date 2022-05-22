@@ -1,12 +1,8 @@
 #!/usr/bin/env node
 const crawling = require("./crawling.js");
 
-//crawling.getRecent("005930", 20);
-
 let command = process.argv[2];
 let code = process.argv[3];
-
-
 
 switch (command) {
     case "now":
@@ -16,7 +12,14 @@ switch (command) {
         let time = process.argv[4];
         crawling.trackPrice(code,time)
         break;
-
+    case "search":
+        let json = require("./csvjson.json");
+        json.forEach((x)=>{
+            if(x.comname.includes(code)){
+                console.log(`${x.code}\t${x.comname}`);
+            }
+        })
+        break;
     default:
         console.log("Wrong command!");
         process.exit(1);
