@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/Migose/kospi-cli.git"
   },
+  "bin":{
+    "kospi": "./main.js"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -17,7 +20,9 @@
   },
   "homepage": "https://github.com/Migose/kospi-cli#readme",
   "dependencies": {
-    "axios": "^0.27.2",
-    "cheerio": "^1.0.0-rc.11"
+    "charset": "^1.0.1",
+    "iconv-lite": "^0.6.3",
+    "node-html-parser": "^5.3.3",
+    "request": "^2.88.2"
   }
 }
