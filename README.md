@@ -55,3 +55,14 @@ $ kospi search 삼성
 000810  삼성화재해상보험
 005930  삼성전자
 ```
+------------
+
+## TO-DOs
+### Functions
+1. Printing Recent price and other infos 
+2. Portfolio-based tracking
+3. Market fundamental infos
+
+### Etc.
+1. Error testing
+2. npm publish
