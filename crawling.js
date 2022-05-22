@@ -67,9 +67,21 @@ function sleep(ms) {
     });
 } 
 
+function getMarket(){
+    url = "https://finance.naver.com/sise/sise_index.naver?code=KOSPI"
+    request({url:url,encoding: null}, (error, res, body) =>{
+        const enc = charset(res.headers, body);
+        const decoded_body = iconv.decode(body, enc);
 
+        let root = parser.parse(decoded_body);
+        let kospi_index = root.querySelector("#now_value").text;
+        let today = new Date();
+        console.log(today.toLocaleTimeString(), kospi_index);
+    })
+}
 module.exports = {
     getPrice,
     trackPrice,
     //getRecent,
+    getMarket,
 };

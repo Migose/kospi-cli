@@ -20,6 +20,10 @@ switch (command) {
             }
         })
         break;
+
+    case "market":
+        crawling.getMarket()
+        break;
     default:
         console.log("Wrong command!");
         process.exit(1);
